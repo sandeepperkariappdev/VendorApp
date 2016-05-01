@@ -1,0 +1,36 @@
+<div id="wrapper">
+    <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a [routerLink]="['Home']">
+                        Vendor App
+                    </a>
+                </li>
+                <li>
+                    <a [routerLink]="['Dashboard']">Dashboard</a>
+                </li>
+                <li>
+                     <a [routerLink]="['CreateMemberComponent']">CreateMember</a>
+                </li>
+                <li>
+                    <a [routerLink]="['VolunteerFormComponent']">VolunteerForm</a>
+                </li>
+                <li>
+                    <a [routerLink]="['ModelDrivenForm']">ModelDrivenForm</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+ 
+   <router-outlet></router-outlet>
+</div>

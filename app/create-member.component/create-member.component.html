@@ -1,0 +1,129 @@
+<form #memberform="ngForm"  (ngSubmit)="onSubmit()" >
+    <section class="form-inline">
+        
+        
+        <fieldset class="form-group col-xs-4">
+            <label class="sr-only" for="firstName">FirstName</label>
+           <input type="text" class="form-control" required
+          [(ngModel)]="newMember.FirstName"
+            ngControl="firstName"  #firstName="ngForm" placeholder="FirstName">
+            <div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">
+            Name is required
+            </div>               
+         </fieldset>
+         
+         
+         
+         <fieldset class="form-group col-xs-4">
+            <label class="sr-only" for="middleName">MiddleName</label>
+            
+             <input type="text" class="form-control" required
+          [(ngModel)]="newMember.MiddleName"
+            ngControl="middleName"  #middleName="ngForm" placeholder="MiddleName">
+            <div [hidden]="middleName.valid || middleName.pristine" class="alert alert-danger">
+            MiddleName is required
+            </div> 
+         </fieldset>
+         
+         
+         <fieldset class="form-group col-xs-4">
+            <label class="sr-only" for="firstName">LastName</label>
+         <input type="text" class="form-control" required
+          [(ngModel)]="newMember.LastName"
+            ngControl="lastName"  #lastName="ngForm" placeholder="LastName">
+            <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
+            LastName is required
+            </div> 
+            
+            
+         </fieldset>         
+    </section>
+     <!-- <section class="form-inline">
+        <fieldset class="form-group col-xs-2 col-xs-offset-2">
+            <label  for="title">Title</label>
+            <select class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+             
+        </fieldset>    
+    </section>
+    <section class="form-inline">
+        <fieldset class="form-group">
+            <label class="sr-only" for="agency">Agency</label>
+            <input type="text" class="form-control" [(ngModel)]="newMember.Agency" ngControl="agency" #agency="ngForm" placeholder="Agency"/>
+        </fieldset> 
+        <div [hidden]="agency.valid || agency.pristine" class="alert alert-danger">
+                Agency is required
+         </div>   
+    </section>
+    
+    <section class="form-inline">
+        <fieldset class="form-group">
+            <label for="address1">Address 1</label>
+            <input type="text" class="form-control" [(ngModel)]="newContact.Address1" ngControl="address1" #address1="ngForm" placeholder="Address1"/>
+            <div [hidden]="address1.valid || address1.pristine" class="alert alert-danger">
+                Address is required
+             </div>
+        </fieldset>
+        
+        <fieldset class="form-group">
+            <label for="address2">Address 2</label>
+            <input type="text" class="form-control" [(ngModel)]="newContact.Address2" ngControl="address2" #address2="ngForm" placeholder="Address2"/>
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" [(ngModel)]="newContact.City" ngControl="city" #city="ngForm" placeholder="city" />
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="state">State</label>
+            <input type="text" class="form-control" [(ngModel)]="newContact.State" ngControl="state" #state="ngForm" placeholder="state"/>
+        </fieldset>  
+        <fieldset class="form-group">
+            <label for="zip">ZipCode</label>
+            <input type="text" class="form-control" [(ngModel)]="newContact.ZipCode" ngControl="zipcode" #zipcode="ngForm" placeholder="ZipCode" />
+        </fieldset>    
+    </section>
+   <section class="form-inline">
+        <fieldset class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" class="form-control" [(ngModel)]="newContact.Phone" ngControl="phone" #phone="ngForm" placeholder="Phone" />
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="ext">Ext</label>
+            <input type="text" class="form-control" [(ngModel)]="newContact.Ext" ngControl="ext" #ext="ngForm" placeholder="Ext" />
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="fax">Fax</label>
+            <input type="text" class="form-control"
+            <input type="text" class="form-control" [(ngModel)]="newContact.Fax" ngControl="fax" #fax="ngForm" placeholder="Fax"/>
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="state">Email</label>
+            <input type="text" class="form-control" [(ngModel)]="newContact.Email" ngControl="email" #email="ngForm" placeholder="Email"/>
+        </fieldset>  
+        <fieldset class="form-group">
+            <label for="website">Website</label>
+            <input type="text" class="form-control" [(ngModel)]="newContact.Website" ngControl="website" #website="ngForm" placeholder="WebSite"/>
+        </fieldset>    
+    </section>
+   <section class="form-inline">
+        <fieldset class="form-group">
+            <label for="standing">Standing</label>
+            <input type="text" class="form-control"  [(ngModel)]="newMember.Standing"  ngControl="standing" #standing="ngForm" placeholder="Standing"/>
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="code">Code</label>
+            <input type="text" class="form-control" [(ngModel)]="newMember.Code" ngControl="code" #code="ngForm"  placeholder="Code"/>
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="ethnicity">Ethnicity</label>
+            <input type="text" class="form-control" [(ngModel)]="newMember.Ethnicity" ngControl="ethnicity" #ethnicity="ngForm" placeholder="Ethnicity"/>
+        </fieldset>
+     </section>-->
+     
+     <button type="submit" [disabled]="!memberform.form.valid" class="btn btn-default">Submit</button>
+</form>
